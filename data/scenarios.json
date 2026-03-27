@@ -1,0 +1,734 @@
+{
+  "metadata": {
+    "total_quiz": 51,
+    "projet": "Quiz dans ta bulle",
+    "version": "v1.0",
+    "description": "50 scénarios de compétences sociales pour jeunes et adultes, organisés par thème",
+    "themes": [
+      "ecole",
+      "amitie",
+      "famille",
+      "quotidien",
+      "reseaux_sociaux",
+      "pro",
+      "relations"
+    ],
+    "image_style_prefix": "Cartoon comic style illustration, fun and expressive, clean lines, vibrant playful colours, diverse characters of various ages, warm and inclusive atmosphere, no text, no labels, digital illustration"
+  },
+  "quiz": [
+    {
+      "id": "001",
+      "theme": "ecole",
+      "contexte": "Tu arrives en retard en cours et tu constates que tous les élèves et le professeur te regardent.",
+      "question": "Que fais-tu dans cette situation ?",
+      "options": {
+        "A": "Je m'excuse pour le retard, je m'installe discrètement à ma place et je me concentre sur le cours.",
+        "B": "Je reste à l'entrée de la classe sans rien dire, en espérant que quelqu'un viendra m'aider.",
+        "C": "J'entre bruyamment et je fais une blague pour détendre l'atmosphère."
+      },
+      "bonne_reponse": "A",
+      "commentaire": "S'excuser et s'installer discrètement montre du respect pour le professeur et les autres. Ça permet aussi de reprendre le cours normalement sans trop attirer l'attention sur toi.",
+      "image_prompt": "Cartoon comic style illustration, fun and expressive, clean lines, vibrant playful colours, diverse characters of various ages, warm and inclusive atmosphere, no text, no labels, digital illustration. A teenager arriving late to a classroom, looking slightly embarrassed, other students turning to look, a teacher at the board, warm yellow classroom light."
+    },
+    {
+      "id": "002",
+      "theme": "ecole",
+      "contexte": "Ton professeur te demande de faire un exposé oral devant toute la classe. Tu es très stressé(e).",
+      "question": "Que fais-tu dans cette situation ?",
+      "options": {
+        "A": "Je parle à mon professeur de mon stress et je lui demande des conseils pour me préparer.",
+        "B": "Je refuse de faire l'exposé car je suis trop stressé(e).",
+        "C": "J'ignore le stress et je fais l'exposé sans préparation supplémentaire."
+      },
+      "bonne_reponse": "A",
+      "commentaire": "Parler de ton stress à ton professeur, c'est courageux ! Ça peut t'aider à obtenir du soutien et de bons conseils pour mieux te préparer. Les profs sont là pour ça aussi.",
+      "image_prompt": "Cartoon comic style illustration, fun and expressive, clean lines, vibrant playful colours, diverse characters of various ages, warm and inclusive atmosphere, no text, no labels, digital illustration. A nervous student talking privately with a kind teacher after class, classroom setting, the student looks anxious but hopeful, the teacher listens attentively."
+    },
+    {
+      "id": "003",
+      "theme": "ecole",
+      "contexte": "Un camarade essaie de copier sur toi pendant un contrôle. Tu te sens mal à l'aise.",
+      "question": "Que fais-tu dans cette situation ?",
+      "options": {
+        "A": "Tu lui dis calmement que tu n'es pas d'accord avec le fait qu'il copie sur toi.",
+        "B": "Tu ignores ce qu'il fait et te concentres sur ton propre test sans rien dire.",
+        "C": "Tu le laisses copier pour éviter de créer des problèmes."
+      },
+      "bonne_reponse": "A",
+      "commentaire": "Fixer des limites de manière calme et respectueuse, c'est une vraie compétence. Tu peux le faire sans être agressif(ve) — juste clair(e) et honnête.",
+      "image_prompt": "Cartoon comic style illustration, fun and expressive, clean lines, vibrant playful colours, diverse characters of various ages, warm and inclusive atmosphere, no text, no labels, digital illustration. Two students sitting at desks during an exam, one leaning toward the other's paper, the other student looking uncomfortable and about to speak, exam room setting."
+    },
+    {
+      "id": "004",
+      "theme": "ecole",
+      "contexte": "Tu es en classe et tu ne comprends pas un exercice. Le professeur semble occupé avec d'autres élèves.",
+      "question": "Que fais-tu dans cette situation ?",
+      "options": {
+        "A": "Ne rien faire et espérer comprendre plus tard.",
+        "B": "Attendre que le professeur soit libre et lui demander de l'aide calmement.",
+        "C": "Interrompre le professeur immédiatement pour poser ta question."
+      },
+      "bonne_reponse": "B",
+      "commentaire": "Attendre le bon moment pour demander de l'aide, c'est respectueux et efficace. Tu obtiens de l'aide sans perturber la classe — tout le monde y gagne !",
+      "image_prompt": "Cartoon comic style illustration, fun and expressive, clean lines, vibrant playful colours, diverse characters of various ages, warm and inclusive atmosphere, no text, no labels, digital illustration. A student sitting at a desk looking at a worksheet with a puzzled expression, patiently waiting while the teacher helps another student in the background."
+    },
+    {
+      "id": "005",
+      "theme": "ecole",
+      "contexte": "Tes camarades sont bruyants en classe et tu n'arrives pas à te concentrer sur ton travail.",
+      "question": "Que fais-tu dans cette situation ?",
+      "options": {
+        "A": "Tu leur demandes calmement de baisser le volume.",
+        "B": "Tu te lèves et quittes la classe sans rien dire.",
+        "C": "Tu ignores le bruit et continues à essayer de te concentrer."
+      },
+      "bonne_reponse": "A",
+      "commentaire": "Exprimer calmement ton besoin, c'est la bonne approche. Tu n'as pas à subir en silence — une demande respectueuse est souvent bien reçue.",
+      "image_prompt": "Cartoon comic style illustration, fun and expressive, clean lines, vibrant playful colours, diverse characters of various ages, warm and inclusive atmosphere, no text, no labels, digital illustration. A student looking frustrated at a desk while other students chat and laugh around them, the central student gesturing calmly to ask for quiet, classroom setting."
+    },
+    {
+      "id": "006",
+      "theme": "ecole",
+      "contexte": "Pendant une discussion de groupe en classe, tu as une opinion différente de celle de la majorité des élèves.",
+      "question": "Que fais-tu dans cette situation ?",
+      "options": {
+        "A": "Tu exprimes ton opinion différente de manière respectueuse en expliquant tes raisons.",
+        "B": "Tu gardes ton opinion pour toi pour éviter le conflit.",
+        "C": "Tu changes d'avis publiquement pour être accepté(e) par le groupe."
+      },
+      "bonne_reponse": "A",
+      "commentaire": "Oser exprimer une opinion différente enrichit la discussion et montre que tu penses par toi-même. Les meilleures conversations naissent souvent des désaccords respectueux !",
+      "image_prompt": "Cartoon comic style illustration, fun and expressive, clean lines, vibrant playful colours, diverse characters of various ages, warm and inclusive atmosphere, no text, no labels, digital illustration. A group of students in a classroom discussion, one student raising their hand confidently to share a different point of view, others listening with open expressions."
+    },
+    {
+      "id": "007",
+      "theme": "ecole",
+      "contexte": "Tu es en cours d'éducation physique et tu es le(la) dernier(ère) à être choisi(e) pour les équipes. Tu te sens embarrassé(e).",
+      "question": "Que fais-tu dans cette situation ?",
+      "options": {
+        "A": "Tu fais de ton mieux pendant le jeu pour contribuer positivement à ton équipe.",
+        "B": "Tu restes en retrait et évites de participer activement.",
+        "C": "Tu exprimes ta frustration en critiquant les autres joueurs."
+      },
+      "bonne_reponse": "A",
+      "commentaire": "Participer avec enthousiasme malgré l'embarras, c'est de la vraie résilience. Et souvent, c'est le meilleur moyen de changer l'image que les autres ont de toi !",
+      "image_prompt": "Cartoon comic style illustration, fun and expressive, clean lines, vibrant playful colours, diverse characters of various ages, warm and inclusive atmosphere, no text, no labels, digital illustration. A gym class scene, a student who looks slightly self-conscious joining a sports team with determination, colorful gym setting, teammates around them."
+    },
+    {
+      "id": "008",
+      "theme": "ecole",
+      "contexte": "Tu remarques qu'un(e) camarade semble triste et isolé(e) pendant la pause. Tu veux l'aider mais tu ne sais pas comment t'y prendre.",
+      "question": "Que fais-tu dans cette situation ?",
+      "options": {
+        "A": "Je demande à un enseignant de s'occuper de lui/elle.",
+        "B": "Je l'ignore et continue mes propres activités.",
+        "C": "Je m'approche de lui/elle et lui demande si tout va bien."
+      },
+      "bonne_reponse": "C",
+      "commentaire": "Aller vers quelqu'un qui semble triste, c'est un beau geste. Un simple 'ça va ?' peut vraiment changer la journée de quelqu'un. N'oublie pas de respecter sa réponse quelle qu'elle soit.",
+      "image_prompt": "Cartoon comic style illustration, fun and expressive, clean lines, vibrant playful colours, diverse characters of various ages, warm and inclusive atmosphere, no text, no labels, digital illustration. A school break scene, one student sitting alone on a bench looking sad, another student walking over with a gentle, kind expression to check on them."
+    },
+    {
+      "id": "009",
+      "theme": "amitie",
+      "contexte": "Un groupe d'amis discute de quelque chose qui t'intéresse, mais tu n'oses pas t'approcher.",
+      "question": "Que fais-tu dans cette situation ?",
+      "options": {
+        "A": "Tu quittes la pièce pour éviter de te sentir mal à l'aise.",
+        "B": "Tu prends une profonde inspiration et tu t'approches du groupe en disant bonjour.",
+        "C": "Tu restes à distance et écoutes sans intervenir."
+      },
+      "bonne_reponse": "B",
+      "commentaire": "Ce petit pas vers le groupe peut sembler énorme, mais la plupart des gens sont contents qu'on les rejoigne. Une grande inspiration et c'est parti !",
+      "image_prompt": "Cartoon comic style illustration, fun and expressive, clean lines, vibrant playful colours, diverse characters of various ages, warm and inclusive atmosphere, no text, no labels, digital illustration. A small group of young people chatting and laughing, one person standing slightly apart looking hesitant but gathering courage to join, casual social setting."
+    },
+    {
+      "id": "010",
+      "theme": "amitie",
+      "contexte": "Quelqu'un se moque de tes centres d'intérêt devant d'autres personnes.",
+      "question": "Que fais-tu dans cette situation ?",
+      "options": {
+        "A": "Ignorer la personne et quitter la pièce, en évitant tout contact visuel.",
+        "B": "Répondre de manière agressive pour défendre tes centres d'intérêt.",
+        "C": "Rester calme et leur dire que tout le monde a des intérêts différents et que c'est ce qui rend chacun unique."
+      },
+      "bonne_reponse": "C",
+      "commentaire": "Rester calme et assumer ce qu'on aime, c'est une vraie force. Tu n'as pas à te justifier, mais expliquer que la diversité des goûts c'est cool peut ouvrir les esprits.",
+      "image_prompt": "Cartoon comic style illustration, fun and expressive, clean lines, vibrant playful colours, diverse characters of various ages, warm and inclusive atmosphere, no text, no labels, digital illustration. A young person standing confidently while another person makes a mocking gesture, the central character responding calmly with an open hand gesture, group of peers watching."
+    },
+    {
+      "id": "011",
+      "theme": "amitie",
+      "contexte": "Tu veux inviter quelqu'un que tu apprécies à ton anniversaire, mais tu as peur qu'il ou elle refuse.",
+      "question": "Que fais-tu dans cette situation ?",
+      "options": {
+        "A": "Je n'invite personne par peur du refus.",
+        "B": "Je vais le/la voir et je lui demande directement s'il/elle souhaite venir.",
+        "C": "Je demande à un(e) autre ami(e) de lui parler à ma place."
+      },
+      "bonne_reponse": "B",
+      "commentaire": "Inviter directement quelqu'un, c'est courageux et sincère. Et même si la réponse est non, tu auras essayé — ce qui est déjà quelque chose dont tu peux être fier(ère) !",
+      "image_prompt": "Cartoon comic style illustration, fun and expressive, clean lines, vibrant playful colours, diverse characters of various ages, warm and inclusive atmosphere, no text, no labels, digital illustration. One person approaching another with a warm smile, handing over what looks like a birthday invitation card, bright cheerful setting with party decorations in the background."
+    },
+    {
+      "id": "012",
+      "theme": "amitie",
+      "contexte": "Tes amis planifient d'aller voir un film d'horreur, mais tu n'aimes pas ce genre. Ils t'invitent.",
+      "question": "Que fais-tu dans cette situation ?",
+      "options": {
+        "A": "Je dis que je suis occupé(e) ce jour-là, même si ce n'est pas vrai.",
+        "B": "Je leur dis honnêtement que les films d'horreur ne m'intéressent pas, mais je leur propose de faire quelque chose ensemble une autre fois.",
+        "C": "J'accepte d'y aller même si je sais que je ne vais pas aimer ça."
+      },
+      "bonne_reponse": "B",
+      "commentaire": "Être honnête sur ses préférences tout en proposant une alternative, c'est le meilleur des deux mondes. Tes amis apprécieront ta franchise et ton envie de passer du temps avec eux.",
+      "image_prompt": "Cartoon comic style illustration, fun and expressive, clean lines, vibrant playful colours, diverse characters of various ages, warm and inclusive atmosphere, no text, no labels, digital illustration. A group of friends outside a cinema, one person politely declining with a friendly gesture while suggesting an alternative, everyone looks relaxed and friendly."
+    },
+    {
+      "id": "013",
+      "theme": "amitie",
+      "contexte": "Tu viens d'apprendre que de fausses rumeurs circulent sur toi parmi tes connaissances.",
+      "question": "Que fais-tu dans cette situation ?",
+      "options": {
+        "A": "Tu commences à répandre des rumeurs sur la personne qui a parlé de toi.",
+        "B": "Tu parles directement à la personne qui propage les rumeurs pour clarifier la situation.",
+        "C": "Tu ignores les rumeurs et continues ta journée."
+      },
+      "bonne_reponse": "B",
+      "commentaire": "Aller clarifier directement la situation, c'est mature et efficace. Répandre des rumeurs en retour ne ferait qu'aggraver les choses — et tu mérites mieux que ça.",
+      "image_prompt": "Cartoon comic style illustration, fun and expressive, clean lines, vibrant playful colours, diverse characters of various ages, warm and inclusive atmosphere, no text, no labels, digital illustration. Two young people having a calm but serious conversation in a park, one looking concerned and the other listening carefully, resolved and honest atmosphere."
+    },
+    {
+      "id": "014",
+      "theme": "amitie",
+      "contexte": "Un(e) ami(e) te demande de l'aide pour quelque chose que tu maîtrises bien.",
+      "question": "Que fais-tu dans cette situation ?",
+      "options": {
+        "A": "Je fais le travail à sa place pour qu'il/elle n'ait pas à s'inquiéter.",
+        "B": "Je prends le temps de lui expliquer patiemment en utilisant des exemples.",
+        "C": "Je lui dis que je suis trop occupé(e) pour l'aider."
+      },
+      "bonne_reponse": "B",
+      "commentaire": "Prendre le temps d'expliquer plutôt que de faire à sa place, c'est le vrai soutien. Ton ami(e) apprendra et sera fier(ère) d'y être arrivé(e) par lui/elle-même !",
+      "image_prompt": "Cartoon comic style illustration, fun and expressive, clean lines, vibrant playful colours, diverse characters of various ages, warm and inclusive atmosphere, no text, no labels, digital illustration. Two friends sitting together at a table, one explaining something with enthusiasm using gestures while the other listens and takes notes, warm cozy setting."
+    },
+    {
+      "id": "015",
+      "theme": "amitie",
+      "contexte": "Lors d'une sortie entre amis, tu remarques qu'un(e) ami(e) fait constamment des blagues sarcastiques qui blessent les autres.",
+      "question": "Que fais-tu dans cette situation ?",
+      "options": {
+        "A": "Tu lui parles en privé pour lui expliquer que ses blagues peuvent blesser les autres.",
+        "B": "Tu fais des blagues sarcastiques à ton tour pour lui montrer ce que ça fait.",
+        "C": "Tu ignores complètement ses blagues et espères qu'il/elle s'arrêtera."
+      },
+      "bonne_reponse": "A",
+      "commentaire": "Parler en privé, c'est la clé. Ton ami(e) n'a peut-être pas conscience de l'impact de ses mots. Un échange discret et bienveillant peut tout changer.",
+      "image_prompt": "Cartoon comic style illustration, fun and expressive, clean lines, vibrant playful colours, diverse characters of various ages, warm and inclusive atmosphere, no text, no labels, digital illustration. Two friends having a quiet private conversation aside from a group, one speaking gently and sincerely while the other listens with a thoughtful expression, outdoor cafe setting."
+    },
+    {
+      "id": "016",
+      "theme": "amitie",
+      "contexte": "Tu arrives à une fête et tu ne connais personne à part l'hôte(sse), qui est occupé(e) avec d'autres invités.",
+      "question": "Que fais-tu dans cette situation ?",
+      "options": {
+        "A": "Tu restes dans un coin en attendant que quelqu'un vienne te parler.",
+        "B": "Tu t'approches d'un petit groupe et tu te présentes poliment.",
+        "C": "Tu pars immédiatement car tu te sens mal à l'aise."
+      },
+      "bonne_reponse": "B",
+      "commentaire": "Se lancer vers un petit groupe, c'est souvent plus facile qu'il n'y paraît. La plupart des gens sont contents d'accueillir quelqu'un de nouveau dans leur conversation !",
+      "image_prompt": "Cartoon comic style illustration, fun and expressive, clean lines, vibrant playful colours, diverse characters of various ages, warm and inclusive atmosphere, no text, no labels, digital illustration. A lively house party scene, one person confidently introducing themselves to a small group, colorful balloons and lights in the background, welcoming expressions on everyone's faces."
+    },
+    {
+      "id": "017",
+      "theme": "amitie",
+      "contexte": "Un(e) ami(e) te demande de lui prêter de l'argent pour la troisième fois ce mois, sans avoir remboursé les fois précédentes.",
+      "question": "Que fais-tu dans cette situation ?",
+      "options": {
+        "A": "Tu lui prêtes encore de l'argent pour éviter un conflit.",
+        "B": "Tu refuses poliment en expliquant que tu aimerais d'abord être remboursé(e) des prêts précédents.",
+        "C": "Tu lui cries dessus pour lui dire qu'il/elle profite de toi."
+      },
+      "bonne_reponse": "B",
+      "commentaire": "Fixer des limites dans une amitié, c'est sain et nécessaire. Refuser poliment tout en exprimant tes attentes, c'est se respecter soi-même tout en préservant la relation.",
+      "image_prompt": "Cartoon comic style illustration, fun and expressive, clean lines, vibrant playful colours, diverse characters of various ages, warm and inclusive atmosphere, no text, no labels, digital illustration. Two friends in conversation, one making a request with a sheepish expression, the other responding calmly with an honest but kind expression, urban casual setting."
+    },
+    {
+      "id": "018",
+      "theme": "amitie",
+      "contexte": "Tu as un désaccord avec ton/ta meilleur(e) ami(e) sur quelque chose d'important pour toi.",
+      "question": "Que fais-tu dans cette situation ?",
+      "options": {
+        "A": "Tu écoutes calmement son point de vue et expliques le tien sans te fâcher.",
+        "B": "Tu évites d'en parler pour ne pas créer de conflit.",
+        "C": "Tu insistes pour qu'il/elle comprenne ton point de vue en élevant la voix."
+      },
+      "bonne_reponse": "A",
+      "commentaire": "Écouter et partager sans colère, c'est le secret des vraies amitiés solides. Un désaccord bien géré peut même rapprocher deux personnes !",
+      "image_prompt": "Cartoon comic style illustration, fun and expressive, clean lines, vibrant playful colours, diverse characters of various ages, warm and inclusive atmosphere, no text, no labels, digital illustration. Two close friends sitting face to face having a calm but serious conversation, both looking engaged and respectful, cozy indoor setting with soft lighting."
+    },
+    {
+      "id": "019",
+      "theme": "famille",
+      "contexte": "Tes parents te demandent de ranger ta chambre alors que tu es concentré(e) sur ton activité favorite.",
+      "question": "Que fais-tu dans cette situation ?",
+      "options": {
+        "A": "Je leur demande gentiment de me laisser finir mon activité et de ranger ensuite.",
+        "B": "Je m'énerve et je leur dis que je ne veux pas ranger.",
+        "C": "J'ignore leur demande et continue mon activité."
+      },
+      "bonne_reponse": "A",
+      "commentaire": "Négocier calmement, c'est une vraie compétence ! Demander à finir ce qu'on fait avant de répondre à une demande, c'est respectueux et souvent bien accueilli.",
+      "image_prompt": "Cartoon comic style illustration, fun and expressive, clean lines, vibrant playful colours, diverse characters of various ages, warm and inclusive atmosphere, no text, no labels, digital illustration. A teenager in their room talking calmly to a parent standing at the door, the room is a bit messy, the teen gestures that they'll tidy soon, relaxed home atmosphere."
+    },
+    {
+      "id": "020",
+      "theme": "famille",
+      "contexte": "Ta famille organise un grand repas avec beaucoup de monde et de bruit. Tu te sens dépassé(e).",
+      "question": "Que fais-tu dans cette situation ?",
+      "options": {
+        "A": "Tu trouves un endroit calme pour te reposer un moment.",
+        "B": "Tu restes dans le bruit même si c'est difficile.",
+        "C": "Tu te mets en colère et cries."
+      },
+      "bonne_reponse": "A",
+      "commentaire": "Prendre soin de soi, c'est intelligent. Faire une petite pause pour se ressourcer te permettra de revenir dans l'ambiance familiale quand tu te sentiras prêt(e).",
+      "image_prompt": "Cartoon comic style illustration, fun and expressive, clean lines, vibrant playful colours, diverse characters of various ages, warm and inclusive atmosphere, no text, no labels, digital illustration. A busy family reunion scene, one person quietly stepping away to a calm corner of the house to breathe and recharge, warm family home setting."
+    },
+    {
+      "id": "021",
+      "theme": "famille",
+      "contexte": "Tu reçois un cadeau d'anniversaire d'un membre de ta famille, mais ce n'est vraiment pas ton style et tu n'en as pas besoin.",
+      "question": "Que fais-tu dans cette situation ?",
+      "options": {
+        "A": "Tu le remercies chaleureusement et montres de la gratitude pour son geste attentionné.",
+        "B": "Tu lui dis directement que le cadeau ne te plaît pas.",
+        "C": "Tu acceptes le cadeau sans dire merci car tu n'en veux pas vraiment."
+      },
+      "bonne_reponse": "A",
+      "commentaire": "L'important, c'est l'intention derrière le cadeau. Montrer de la gratitude sincère préserve les sentiments de l'autre et renforce votre relation — même si le cadeau ne sera jamais utilisé !",
+      "image_prompt": "Cartoon comic style illustration, fun and expressive, clean lines, vibrant playful colours, diverse characters of various ages, warm and inclusive atmosphere, no text, no labels, digital illustration. A young person receiving a gift from an older family member, smiling warmly and hugging them, birthday setting with cake and candles."
+    },
+    {
+      "id": "022",
+      "theme": "famille",
+      "contexte": "Tu veux parler à tes parents de quelque chose qui te pèse, mais tu ne sais pas comment aborder le sujet.",
+      "question": "Que fais-tu dans cette situation ?",
+      "options": {
+        "A": "Tu attends un moment calme et tu leur dis simplement que tu as besoin de leur parler de quelque chose.",
+        "B": "Tu gardes tout pour toi en espérant que ça passe tout seul.",
+        "C": "Tu leur envoies un message pour éviter la conversation en face à face."
+      },
+      "bonne_reponse": "A",
+      "commentaire": "Choisir le bon moment pour parler, c'est déjà la moitié du chemin. Tes parents préféreront toujours savoir ce qui se passe — même si c'est difficile à dire.",
+      "image_prompt": "Cartoon comic style illustration, fun and expressive, clean lines, vibrant playful colours, diverse characters of various ages, warm and inclusive atmosphere, no text, no labels, digital illustration. A young person sitting with their parents in a cozy living room, initiating a conversation with a sincere and slightly nervous expression, parents listening attentively."
+    },
+    {
+      "id": "023",
+      "theme": "famille",
+      "contexte": "Ton frère ou ta sœur prend tes affaires sans te demander la permission. Ça t'énerve vraiment.",
+      "question": "Que fais-tu dans cette situation ?",
+      "options": {
+        "A": "Tu lui caches tes affaires sans lui en parler.",
+        "B": "Tu lui expliques calmement que tu aimerais qu'il/elle te demande avant de prendre tes affaires.",
+        "C": "Tu prends ses affaires à ton tour pour lui montrer ce que ça fait."
+      },
+      "bonne_reponse": "B",
+      "commentaire": "Exprimer clairement ce qui te dérange, c'est bien plus efficace que la revanche ! Une conversation directe et calme peut régler le problème durablement.",
+      "image_prompt": "Cartoon comic style illustration, fun and expressive, clean lines, vibrant playful colours, diverse characters of various ages, warm and inclusive atmosphere, no text, no labels, digital illustration. Two siblings at home, one calmly talking to the other about borrowing things without permission, the other listening with a slightly guilty expression, bedroom setting."
+    },
+    {
+      "id": "024",
+      "theme": "quotidien",
+      "contexte": "Tu es dans un magasin et tu ne trouves pas ce que tu cherches.",
+      "question": "Que fais-tu dans cette situation ?",
+      "options": {
+        "A": "Tu quittes le magasin sans demander d'aide.",
+        "B": "Tu cherches un vendeur et dis poliment : 'Excusez-moi, pourriez-vous m'aider à trouver cet article ?'",
+        "C": "Tu continues à chercher tout seul(e) même si tu es perdu(e)."
+      },
+      "bonne_reponse": "B",
+      "commentaire": "Demander de l'aide, c'est malin, pas une faiblesse ! Les vendeurs sont là pour ça, et une question polic te fera gagner un temps précieux.",
+      "image_prompt": "Cartoon comic style illustration, fun and expressive, clean lines, vibrant playful colours, diverse characters of various ages, warm and inclusive atmosphere, no text, no labels, digital illustration. A customer politely asking a shop employee for help finding a product, bright colorful store setting, both people smiling."
+    },
+    {
+      "id": "025",
+      "theme": "quotidien",
+      "contexte": "Dans les transports en commun, une personne à côté de toi écoute de la musique très fort. Ça te dérange.",
+      "question": "Que fais-tu dans cette situation ?",
+      "options": {
+        "A": "Tu te rapproches et lui demandes poliment de baisser le volume.",
+        "B": "Tu changes de place pour t'éloigner du bruit.",
+        "C": "Tu commences à écouter ta propre musique encore plus fort."
+      },
+      "bonne_reponse": "A",
+      "commentaire": "Demander poliment, c'est souvent la solution la plus simple. La personne n'a peut-être pas réalisé que ça dérangeait — une demande sympa peut tout arranger !",
+      "image_prompt": "Cartoon comic style illustration, fun and expressive, clean lines, vibrant playful colours, diverse characters of various ages, warm and inclusive atmosphere, no text, no labels, digital illustration. Interior of a metro or bus, one passenger politely tapping another on the shoulder to ask them to lower their music, relaxed urban commute setting."
+    },
+    {
+      "id": "026",
+      "theme": "quotidien",
+      "contexte": "Tu es dans une file d'attente et quelqu'un passe devant toi sans faire exprès.",
+      "question": "Que fais-tu dans cette situation ?",
+      "options": {
+        "A": "Tu lui demandes poliment s'il/elle peut retourner à sa place.",
+        "B": "Tu l'ignores et laisses passer.",
+        "C": "Tu lui cries dessus pour qu'il/elle retourne à sa place."
+      },
+      "bonne_reponse": "A",
+      "commentaire": "Une remarque polie suffit ! La personne n'a probablement pas fait exprès — et une demande calme règle la situation sans drama.",
+      "image_prompt": "Cartoon comic style illustration, fun and expressive, clean lines, vibrant playful colours, diverse characters of various ages, warm and inclusive atmosphere, no text, no labels, digital illustration. A queue in a bakery or shop, one person calmly pointing out to another that they accidentally skipped the line, both with relaxed expressions, colorful urban setting."
+    },
+    {
+      "id": "027",
+      "theme": "quotidien",
+      "contexte": "Tu te trouves dans un grand centre commercial et tu réalises que tu es perdu(e).",
+      "question": "Que fais-tu dans cette situation ?",
+      "options": {
+        "A": "Tu cherches un agent de sécurité ou un employé pour demander de l'aide.",
+        "B": "Tu restes sur place et attends que quelqu'un vienne t'aider.",
+        "C": "Tu essaies de trouver ton chemin seul(e) en regardant les plans."
+      },
+      "bonne_reponse": "A",
+      "commentaire": "Demander de l'aide à quelqu'un de compétent, c'est efficace et rassurant. Les agents de sécurité connaissent le centre commercial comme leur poche !",
+      "image_prompt": "Cartoon comic style illustration, fun and expressive, clean lines, vibrant playful colours, diverse characters of various ages, warm and inclusive atmosphere, no text, no labels, digital illustration. A person looking slightly lost in a busy shopping mall, approaching a security guard or staff member for directions, bright mall setting with shops in the background."
+    },
+    {
+      "id": "028",
+      "theme": "quotidien",
+      "contexte": "Tu es dans un restaurant et le plat qu'on t'a servi n'est pas ce que tu avais commandé.",
+      "question": "Que fais-tu dans cette situation ?",
+      "options": {
+        "A": "Tu manges le mauvais plat sans rien dire pour ne pas déranger.",
+        "B": "Tu appelles le serveur calmement et lui expliques l'erreur.",
+        "C": "Tu te mets en colère et parles fort pour que tout le monde t'entende."
+      },
+      "bonne_reponse": "B",
+      "commentaire": "Signaler une erreur calmement, c'est normal et légitime. Les serveurs apprécient les clients polis — et tu obtiendras ce que tu voulais sans stress !",
+      "image_prompt": "Cartoon comic style illustration, fun and expressive, clean lines, vibrant playful colours, diverse characters of various ages, warm and inclusive atmosphere, no text, no labels, digital illustration. A diner calmly calling a waiter over to politely point out an order mistake, restaurant setting with warm lighting, both the customer and waiter looking relaxed."
+    },
+    {
+      "id": "029",
+      "theme": "quotidien",
+      "contexte": "Tu es dans un parc et tu vois quelqu'un jeter ses déchets par terre devant toi.",
+      "question": "Que fais-tu dans cette situation ?",
+      "options": {
+        "A": "Tu lui fais poliment remarquer qu'il y a une poubelle à proximité.",
+        "B": "Tu ignores la situation.",
+        "C": "Tu ramasses les déchets toi-même sans rien dire."
+      },
+      "bonne_reponse": "A",
+      "commentaire": "Faire remarquer quelque chose de manière polie, c'est courageux et utile. La plupart des gens réagissent bien à une remarque bienveillante — et parfois ça les fait réfléchir pour la suite !",
+      "image_prompt": "Cartoon comic style illustration, fun and expressive, clean lines, vibrant playful colours, diverse characters of various ages, warm and inclusive atmosphere, no text, no labels, digital illustration. A sunny park scene, one person gently pointing out a nearby bin to someone who dropped litter, green trees and paths in the background, friendly interaction."
+    },
+    {
+      "id": "030",
+      "theme": "quotidien",
+      "contexte": "Tu es à la cantine ou dans un café et tu cherches une place assise. Tu vois une personne seule. Tu aimerais te joindre à elle.",
+      "question": "Que fais-tu dans cette situation ?",
+      "options": {
+        "A": "Tu t'assois sans rien dire, en espérant qu'elle soit d'accord.",
+        "B": "Tu t'approches et demandes poliment si tu peux t'asseoir avec elle.",
+        "C": "Tu cherches une autre table même si tu préfères t'asseoir avec elle."
+      },
+      "bonne_reponse": "B",
+      "commentaire": "Demander la permission, c'est respectueux et ça ouvre la porte à une rencontre sympa. Qui sait, cette personne est peut-être ravie qu'on lui propose de la compagnie !",
+      "image_prompt": "Cartoon comic style illustration, fun and expressive, clean lines, vibrant playful colours, diverse characters of various ages, warm and inclusive atmosphere, no text, no labels, digital illustration. A busy cafeteria or café, one person politely asking another if they can sit at the same table, the seated person looking up with a welcoming smile."
+    },
+    {
+      "id": "031",
+      "theme": "quotidien",
+      "contexte": "Tu es dans un magasin et tu remarques qu'une personne âgée a du mal à atteindre un produit sur une étagère haute.",
+      "question": "Que fais-tu dans cette situation ?",
+      "options": {
+        "A": "Tu continues tes courses sans intervenir pour ne pas la déranger.",
+        "B": "Tu t'approches et proposes poliment ton aide.",
+        "C": "Tu attrapes le produit et le lui donnes sans demander."
+      },
+      "bonne_reponse": "B",
+      "commentaire": "Proposer son aide en demandant d'abord, c'est respecter l'autonomie de l'autre. Ça lui laisse le choix d'accepter ou non — et c'est ça, la vraie bienveillance.",
+      "image_prompt": "Cartoon comic style illustration, fun and expressive, clean lines, vibrant playful colours, diverse characters of various ages, warm and inclusive atmosphere, no text, no labels, digital illustration. A supermarket aisle, a younger person offering to help an elderly person reach a product on a high shelf, both smiling warmly, bright store lighting."
+    },
+    {
+      "id": "032",
+      "theme": "quotidien",
+      "contexte": "Quelqu'un a critiqué quelque chose que tu fais souvent ou une habitude que tu as. Ça t'a blessé(e).",
+      "question": "Que fais-tu dans cette situation ?",
+      "options": {
+        "A": "Tu prends un moment pour respirer et réfléchir à la critique avant de répondre.",
+        "B": "Tu réponds immédiatement avec colère pour te défendre.",
+        "C": "Tu ignores complètement la critique comme si elle n'avait jamais été dite."
+      },
+      "bonne_reponse": "A",
+      "commentaire": "Prendre un temps de recul avant de répondre, c'est une compétence précieuse. Ça te permet de choisir ta réponse plutôt que de la subir — et souvent, la critique contient quelque chose d'utile.",
+      "image_prompt": "Cartoon comic style illustration, fun and expressive, clean lines, vibrant playful colours, diverse characters of various ages, warm and inclusive atmosphere, no text, no labels, digital illustration. A person sitting quietly alone, taking a deep breath with eyes closed, thinking calmly after receiving criticism, peaceful indoor setting with soft warm light."
+    },
+    {
+      "id": "033",
+      "theme": "reseaux_sociaux",
+      "contexte": "Tu postes quelque chose sur les réseaux sociaux et tu reçois un commentaire méchant d'un(e) inconnu(e).",
+      "question": "Que fais-tu dans cette situation ?",
+      "options": {
+        "A": "Tu réponds avec un commentaire encore plus méchant.",
+        "B": "Tu ignores ou bloques la personne et si ça t'affecte, tu en parles à quelqu'un de confiance.",
+        "C": "Tu supprimes immédiatement ton post et arrêtes de publier."
+      },
+      "bonne_reponse": "B",
+      "commentaire": "Les commentaires négatifs en ligne ne méritent souvent pas de réponse. Bloquer et passer à autre chose, c'est se respecter. Et si ça te touche vraiment, en parler à quelqu'un de confiance aide beaucoup.",
+      "image_prompt": "Cartoon comic style illustration, fun and expressive, clean lines, vibrant playful colours, diverse characters of various ages, warm and inclusive atmosphere, no text, no labels, digital illustration. A young person looking at their phone with a slightly annoyed expression, choosing to block or ignore a comment, sitting comfortably on a couch, calm and empowered atmosphere."
+    },
+    {
+      "id": "034",
+      "theme": "reseaux_sociaux",
+      "contexte": "Ton/ta ami(e) publie une photo de toi sur les réseaux sociaux sans te demander la permission. Tu n'aimes pas cette photo.",
+      "question": "Que fais-tu dans cette situation ?",
+      "options": {
+        "A": "Tu lui envoies un message pour lui demander de la supprimer, en expliquant pourquoi.",
+        "B": "Tu laisses la photo car tu ne veux pas créer de conflit.",
+        "C": "Tu publies une mauvaise photo de lui/elle en représailles."
+      },
+      "bonne_reponse": "A",
+      "commentaire": "Demander à quelqu'un de supprimer une photo qu'on n'aime pas, c'est tout à fait légitime. Un message sympa et direct règle le problème — et rappelle à ton ami(e) de demander la prochaine fois !",
+      "image_prompt": "Cartoon comic style illustration, fun and expressive, clean lines, vibrant playful colours, diverse characters of various ages, warm and inclusive atmosphere, no text, no labels, digital illustration. A person typing a message on their phone to a friend about a social media photo, thoughtful but calm expression, cozy bedroom setting."
+    },
+    {
+      "id": "035",
+      "theme": "reseaux_sociaux",
+      "contexte": "Tu vois sur les réseaux sociaux que tes amis ont organisé une sortie sans t'inviter. Tu te sens exclu(e).",
+      "question": "Que fais-tu dans cette situation ?",
+      "options": {
+        "A": "Tu leur envoies un message agressif pour exprimer ta colère.",
+        "B": "Tu ne dis rien mais tu leur en veux en silence.",
+        "C": "Tu trouves un bon moment pour dire à un(e) ami(e) de confiance que tu t'es senti(e) mis(e) de côté."
+      },
+      "bonne_reponse": "C",
+      "commentaire": "Exprimer ce qu'on ressent à quelqu'un de confiance, c'est sain. Ça peut t'aider à voir la situation différemment — et parfois, il y a une explication simple que tu n'avais pas envisagée !",
+      "image_prompt": "Cartoon comic style illustration, fun and expressive, clean lines, vibrant playful colours, diverse characters of various ages, warm and inclusive atmosphere, no text, no labels, digital illustration. A person looking at social media on their phone with a sad expression, then texting a close friend, the mood shifting from hurt to relief, warm indoor light."
+    },
+    {
+      "id": "036",
+      "theme": "reseaux_sociaux",
+      "contexte": "Quelqu'un partage avec toi une information sur les réseaux sociaux qui te semble fausse ou exagérée.",
+      "question": "Que fais-tu dans cette situation ?",
+      "options": {
+        "A": "Tu la partages quand même car elle vient d'un(e) ami(e).",
+        "B": "Tu vérifie l'info sur une source fiable avant de la partager ou de la croire.",
+        "C": "Tu l'ignores sans en parler à personne."
+      },
+      "bonne_reponse": "B",
+      "commentaire": "Vérifier une information avant de la partager, c'est un réflexe super important aujourd'hui. En faisant ça, tu contribues à un internet plus fiable — bravo à toi !",
+      "image_prompt": "Cartoon comic style illustration, fun and expressive, clean lines, vibrant playful colours, diverse characters of various ages, warm and inclusive atmosphere, no text, no labels, digital illustration. A person looking skeptically at a post on their phone, then searching for the information on a reliable website, thoughtful and curious expression, bright desk setting."
+    },
+    {
+      "id": "037",
+      "theme": "reseaux_sociaux",
+      "contexte": "Tu reçois un message d'un(e) inconnu(e) sur les réseaux sociaux qui te demande des infos personnelles.",
+      "question": "Que fais-tu dans cette situation ?",
+      "options": {
+        "A": "Tu réponds et tu donnes les informations demandées pour être sympa.",
+        "B": "Tu ignores le message ou bloques la personne sans donner d'informations.",
+        "C": "Tu lui demandes pourquoi il/elle veut ces infos avant de décider."
+      },
+      "bonne_reponse": "B",
+      "commentaire": "Ne jamais donner d'informations personnelles à un(e) inconnu(e) en ligne, c'est une règle d'or. Ignorer ou bloquer, c'est se protéger — et c'est toujours la bonne décision.",
+      "image_prompt": "Cartoon comic style illustration, fun and expressive, clean lines, vibrant playful colours, diverse characters of various ages, warm and inclusive atmosphere, no text, no labels, digital illustration. A person receiving a suspicious message on their phone, looking cautious and choosing to block the sender, empowered and confident expression, safe home setting."
+    },
+    {
+      "id": "038",
+      "theme": "reseaux_sociaux",
+      "contexte": "Tu remarques qu'un(e) ami(e) passe énormément de temps sur les réseaux sociaux et semble de plus en plus isolé(e).",
+      "question": "Que fais-tu dans cette situation ?",
+      "options": {
+        "A": "Tu ne dis rien, ce ne sont pas tes affaires.",
+        "B": "Tu lui proposes de faire une activité ensemble en dehors des écrans.",
+        "C": "Tu lui envoies un message sur les réseaux sociaux pour lui dire que tu t'inquiètes."
+      },
+      "bonne_reponse": "B",
+      "commentaire": "Proposer une activité ensemble, c'est une façon douce et naturelle d'aider quelqu'un à décrocher un peu. Pas besoin de grand discours — juste être là en vrai !",
+      "image_prompt": "Cartoon comic style illustration, fun and expressive, clean lines, vibrant playful colours, diverse characters of various ages, warm and inclusive atmosphere, no text, no labels, digital illustration. A person inviting a friend who's been on their phone to go out for a walk or activity, the friend looking up surprised and smiling, warm sunny outdoor setting."
+    },
+    {
+      "id": "039",
+      "theme": "reseaux_sociaux",
+      "contexte": "Tu vois un post sur les réseaux sociaux où quelqu'un se fait humilier publiquement. Tu ne connais pas cette personne.",
+      "question": "Que fais-tu dans cette situation ?",
+      "options": {
+        "A": "Tu likes le post car tout le monde le fait.",
+        "B": "Tu ignores et scrolles.",
+        "C": "Tu ne l'aimes pas, tu ne le partages pas, et si la plateforme le permet, tu le signales."
+      },
+      "bonne_reponse": "C",
+      "commentaire": "Ne pas participer à une humiliation publique, c'est déjà beaucoup. Signaler un contenu blessant, c'est encore mieux — c'est agir pour un internet plus respectueux.",
+      "image_prompt": "Cartoon comic style illustration, fun and expressive, clean lines, vibrant playful colours, diverse characters of various ages, warm and inclusive atmosphere, no text, no labels, digital illustration. A person looking troubled at a mean post on their phone, deciding to report it rather than engage, determined and empathetic expression, casual home setting."
+    },
+    {
+      "id": "040",
+      "theme": "pro",
+      "contexte": "C'est ton premier jour de stage ou de job étudiant. Tu ne sais pas encore très bien ce que tu dois faire.",
+      "question": "Que fais-tu dans cette situation ?",
+      "options": {
+        "A": "Tu attends qu'on vienne te voir sans poser de questions.",
+        "B": "Tu observes les autres et tu poses des questions poliment quand tu as besoin de clarifications.",
+        "C": "Tu fais semblant de savoir pour ne pas paraître incompétent(e)."
+      },
+      "bonne_reponse": "B",
+      "commentaire": "Observer et poser des questions, c'est exactement ce qu'on attend d'un(e) nouveau(elle) ! Personne ne s'attend à ce que tu saches tout dès le premier jour.",
+      "image_prompt": "Cartoon comic style illustration, fun and expressive, clean lines, vibrant playful colours, diverse characters of various ages, warm and inclusive atmosphere, no text, no labels, digital illustration. A young person on their first day at work, attentively observing a colleague who's showing them the ropes, modern office or shop setting, welcoming atmosphere."
+    },
+    {
+      "id": "041",
+      "theme": "pro",
+      "contexte": "Lors d'une réunion ou d'un cours en groupe, ton/ta responsable ou formateur(trice) te demande ton avis devant tout le monde.",
+      "question": "Que fais-tu dans cette situation ?",
+      "options": {
+        "A": "Tu dis que tu n'as pas d'avis pour éviter de te tromper.",
+        "B": "Tu donnes ton avis honnêtement, même si tu n'es pas sûr(e) à 100%.",
+        "C": "Tu répètes ce que quelqu'un d'autre vient de dire pour ne pas prendre de risque."
+      },
+      "bonne_reponse": "B",
+      "commentaire": "Donner son avis même avec des doutes, c'est montrer qu'on s'implique. Tu peux toujours nuancer avec 'je pense que...' ou 'ce n'est peut-être pas parfait, mais...' — c'est apprécié !",
+      "image_prompt": "Cartoon comic style illustration, fun and expressive, clean lines, vibrant playful colours, diverse characters of various ages, warm and inclusive atmosphere, no text, no labels, digital illustration. A young person speaking up confidently during a team meeting or training session, others listening attentively, modern meeting room with whiteboards."
+    },
+    {
+      "id": "042",
+      "theme": "pro",
+      "contexte": "Tu as fait une erreur dans ton travail et ton/ta responsable l'a remarqué.",
+      "question": "Que fais-tu dans cette situation ?",
+      "options": {
+        "A": "Tu nies avoir fait l'erreur.",
+        "B": "Tu t'excuses, tu expliques ce qui s'est passé et tu proposes de corriger.",
+        "C": "Tu te mets à pleurer ou tu te fâches car tu te sens jugé(e)."
+      },
+      "bonne_reponse": "B",
+      "commentaire": "Reconnaître une erreur et proposer de la corriger, c'est une réaction professionnelle et mature. Tout le monde fait des erreurs — ce qui compte, c'est comment on les gère.",
+      "image_prompt": "Cartoon comic style illustration, fun and expressive, clean lines, vibrant playful colours, diverse characters of various ages, warm and inclusive atmosphere, no text, no labels, digital illustration. A young employee calmly acknowledging a mistake to their manager, both looking constructive and solution-focused, professional but friendly office setting."
+    },
+    {
+      "id": "043",
+      "theme": "pro",
+      "contexte": "Un(e) collègue ou camarade de formation monopolise toujours la parole dans les discussions de groupe.",
+      "question": "Que fais-tu dans cette situation ?",
+      "options": {
+        "A": "Tu attends patiemment une pause pour prendre la parole.",
+        "B": "Tu l'interromps brutalement pour exprimer ton point de vue.",
+        "C": "Tu ne dis plus rien et laisses cette personne parler."
+      },
+      "bonne_reponse": "A",
+      "commentaire": "Attendre une pause pour prendre la parole, c'est stratégique et respectueux. Si ça arrive tout le temps, tu peux aussi poliment dire : 'J'aimerais ajouter quelque chose...'",
+      "image_prompt": "Cartoon comic style illustration, fun and expressive, clean lines, vibrant playful colours, diverse characters of various ages, warm and inclusive atmosphere, no text, no labels, digital illustration. A group discussion scene, one person waiting for the right moment to speak while another talks a lot, others looking slightly impatient but polite, professional casual setting."
+    },
+    {
+      "id": "044",
+      "theme": "pro",
+      "contexte": "Tu dois envoyer un email à ton/ta responsable pour expliquer un retard dans une tâche.",
+      "question": "Comment rédiges-tu cet email ?",
+      "options": {
+        "A": "Tu n'envoies pas d'email et espères que personne ne remarque.",
+        "B": "Tu envoies un email court, poli et factuel qui explique le retard et propose une nouvelle date.",
+        "C": "Tu envoies un long email avec plein d'excuses et de détails personnels."
+      },
+      "bonne_reponse": "B",
+      "commentaire": "Un email court, clair et proactif, c'est exactement ce qu'on attend dans un contexte professionnel. Inutile de sur-expliquer — l'essentiel, c'est la transparence et la solution proposée.",
+      "image_prompt": "Cartoon comic style illustration, fun and expressive, clean lines, vibrant playful colours, diverse characters of various ages, warm and inclusive atmosphere, no text, no labels, digital illustration. A person typing a professional email on a laptop with a calm and focused expression, clean modern desk setup, coffee cup nearby."
+    },
+    {
+      "id": "045",
+      "theme": "pro",
+      "contexte": "Lors d'un entretien ou d'une présentation, tu as un blanc et tu oublies ce que tu allais dire.",
+      "question": "Que fais-tu dans cette situation ?",
+      "options": {
+        "A": "Tu paniques et tu t'excuses profusément.",
+        "B": "Tu prends une courte pause, tu respires et tu reprends calmement.",
+        "C": "Tu inventes quelque chose de faux pour combler le silence."
+      },
+      "bonne_reponse": "B",
+      "commentaire": "Un petit silence, ça arrive à tout le monde — même aux pros ! Prendre une pause et respirer, ça permet de retrouver le fil. Les gens qui t'écoutent apprécient le calme plus que la panique.",
+      "image_prompt": "Cartoon comic style illustration, fun and expressive, clean lines, vibrant playful colours, diverse characters of various ages, warm and inclusive atmosphere, no text, no labels, digital illustration. A person pausing calmly during a presentation or interview, taking a breath, audience or interviewer watching patiently, professional setting with warm light."
+    },
+    {
+      "id": "046",
+      "theme": "pro",
+      "contexte": "Tu travailles dans une équipe et tu remarques qu'un(e) collègue semble surchargé(e) et stressé(e).",
+      "question": "Que fais-tu dans cette situation ?",
+      "options": {
+        "A": "Tu ne fais rien, c'est son problème.",
+        "B": "Tu lui proposes spontanément ton aide si tu as de la disponibilité.",
+        "C": "Tu en parles à tout le monde dans l'équipe pour attirer l'attention sur la situation."
+      },
+      "bonne_reponse": "B",
+      "commentaire": "Proposer spontanément son aide, c'est un geste simple qui fait vraiment la différence dans une équipe. Ça crée une vraie solidarité au travail.",
+      "image_prompt": "Cartoon comic style illustration, fun and expressive, clean lines, vibrant playful colours, diverse characters of various ages, warm and inclusive atmosphere, no text, no labels, digital illustration. A coworker leaning over to offer help to a colleague who looks overwhelmed at their desk, warm supportive gesture, modern open-plan office."
+    },
+    {
+      "id": "047",
+      "theme": "pro",
+      "contexte": "Tu dois travailler en binôme avec quelqu'un que tu ne connais pas bien et avec qui tu as des façons de travailler très différentes.",
+      "question": "Que fais-tu dans cette situation ?",
+      "options": {
+        "A": "Tu imposes ta méthode de travail car tu penses qu'elle est meilleure.",
+        "B": "Tu prends le temps de discuter avec lui/elle de vos méthodes respectives et vous trouvez un fonctionnement qui convient aux deux.",
+        "C": "Tu laisses l'autre décider de tout pour éviter les frictions."
+      },
+      "bonne_reponse": "B",
+      "commentaire": "Prendre le temps de s'aligner sur comment on va travailler ensemble, c'est investir du temps qui sera vite rattrapé. Les meilleures collaborations naissent souvent de méthodes différentes bien combinées !",
+      "image_prompt": "Cartoon comic style illustration, fun and expressive, clean lines, vibrant playful colours, diverse characters of various ages, warm and inclusive atmosphere, no text, no labels, digital illustration. Two people sitting together planning their work on a shared project, both actively contributing ideas, whiteboard or notebook visible, collaborative and energetic atmosphere."
+    },
+    {
+      "id": "048",
+      "theme": "relations",
+      "contexte": "Tu as un(e) crush et tu veux lui faire savoir que tu l'apprécies, mais tu as peur de sa réaction.",
+      "question": "Que fais-tu dans cette situation ?",
+      "options": {
+        "A": "Tu ne dis rien et tu espères qu'il/elle devinera.",
+        "B": "Tu trouves un moment calme pour lui dire simplement et sincèrement que tu l'apprécies.",
+        "C": "Tu demandes à un(e) ami(e) de lui transmettre le message à ta place."
+      },
+      "bonne_reponse": "B",
+      "commentaire": "Exprimer ses sentiments directement, c'est courageux et honnête. Quelle que soit la réponse, tu pourras être fier(ère) d'avoir été authentique — et ça, ça n'a pas de prix !",
+      "image_prompt": "Cartoon comic style illustration, fun and expressive, clean lines, vibrant playful colours, diverse characters of various ages, warm and inclusive atmosphere, no text, no labels, digital illustration. A nervous but sincere person having a quiet conversation with their crush in a park or café, both looking slightly awkward but open, soft romantic pastel tones."
+    },
+    {
+      "id": "049",
+      "theme": "relations",
+      "contexte": "Quelqu'un que tu fréquentes fait souvent des remarques qui te blessent, même si ce n'est peut-être pas intentionnel.",
+      "question": "Que fais-tu dans cette situation ?",
+      "options": {
+        "A": "Tu gardes tout pour toi en accumulant la frustration.",
+        "B": "Tu lui expliques calmement que certaines de ses remarques te blessent et lui donnes un exemple précis.",
+        "C": "Tu coupes tout contact sans lui expliquer pourquoi."
+      },
+      "bonne_reponse": "B",
+      "commentaire": "Donner un exemple précis aide l'autre à comprendre ce qui te touche — sans avoir à deviner. La plupart des gens ne réalisent pas qu'ils blessent et seront soulagés que tu leur en parles.",
+      "image_prompt": "Cartoon comic style illustration, fun and expressive, clean lines, vibrant playful colours, diverse characters of various ages, warm and inclusive atmosphere, no text, no labels, digital illustration. Two people in a calm honest conversation, one person gently explaining how something made them feel, the other listening carefully with an open expression, warm interior setting."
+    },
+    {
+      "id": "050",
+      "theme": "relations",
+      "contexte": "Tu réalises que tu passes beaucoup moins de temps avec tes ami(e)s depuis que tu es en couple ou très proche d'une personne.",
+      "question": "Que fais-tu dans cette situation ?",
+      "options": {
+        "A": "Tu continues comme avant, tes ami(e)s comprendront.",
+        "B": "Tu prends conscience de la situation et tu fais l'effort de reprendre contact avec tes ami(e)s.",
+        "C": "Tu attends que tes ami(e)s te reprochent quelque chose avant d'agir."
+      },
+      "bonne_reponse": "B",
+      "commentaire": "Entretenir ses amitiés même quand on est amoureux(se), c'est essentiel. Tes ami(e)s sont une richesse à part entière — et eux aussi ont besoin de toi de temps en temps !",
+      "image_prompt": "Cartoon comic style illustration, fun and expressive, clean lines, vibrant playful colours, diverse characters of various ages, warm and inclusive atmosphere, no text, no labels, digital illustration. A person happily reuniting with a group of friends after some time apart, warm group hug or joyful reunion scene, sunny outdoor setting."
+    },
+    {
+      "theme": "orientation_dans_un_lieu_public",
+      "contexte": "Tu arrives dans une grande gare bondée pour prendre ton train, mais après avoir cherché les panneaux, tu ne trouves pas ton quai. Les voyageurs se pressent autour de toi et les annonces sont couvertes par le bruit ambiant.",
+      "question": "Que fais-tu dans cette situation ?",
+      "options": {
+        "A": "Je m’approche d’un agent en uniforme pour lui demander poliment mon chemin.",
+        "B": "Je reste immobile au milieu du passage et je scrute les panneaux en espérant les voir enfin.",
+        "C": "Je demande à un autre voyageur pressé qui semble connaître la gare, sans préciser que je suis perdu."
+      },
+      "bonne_reponse": "A",
+      "commentaire": "Un agent en uniforme est là pour t’aider, et poser la question avec calme lui permet de t’orienter rapidement sans te faire perdre plus de temps. Un sourire ou un merci rendent l’échange agréable pour tous les deux !",
+      "image_prompt": "Cartoon comic style illustration, fun and expressive, clean lines, vibrant playful colours, diverse characters of various ages, warm and inclusive atmosphere, no text, no labels, digital illustration. A medium-sized modern train station with tall platforms, some people rushing with suitcases, a friendly station agent in a bright uniform (blue and yellow) holding a walkie-talkie, pointing with a smile towards one of the tracks, a lost traveler (young woman with curly hair, wearing a backpack) looking relieved and smiling back at the agent.",
+      "id": "051"
+    }
+  ]
+}

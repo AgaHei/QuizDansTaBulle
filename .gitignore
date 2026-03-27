@@ -1,0 +1,23 @@
+# Sécurité — clés API
+.env
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+
+# Environnements virtuels
+venv/
+.venv/
+env/
+
+# Streamlit
+.streamlit/secrets.toml
+
+# Logs de génération (spécifiques à chaque instance)
+generation_log.json
+
+# OS
+.DS_Store
+Thumbs.db
