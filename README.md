@@ -2,10 +2,13 @@
 
 > Application interactive d'entraînement aux compétences sociales, propulsée par Mistral AI et déployée sur HuggingFace Spaces.
 
-[![HuggingFace](https://img.shields.io/badge/🤗%20HuggingFace-Quiz%20dans%20ta%20bulle-blue)](https://huggingface.co/spaces/TON_USERNAME/quiz-dans-ta-bulle)
+## 🚀 **[➤ Essayer l'app en ligne](https://huggingface.co/spaces/AgaHei/Quiz-Dans-Ta-Bulle)** 🫧
+
+[![HuggingFace Spaces](https://img.shields.io/badge/🤗%20HuggingFace%20Spaces-Quiz%20Dans%20Ta%20Bulle-ffcc33)](https://huggingface.co/spaces/AgaHei/Quiz-Dans-Ta-Bulle)
 [![Streamlit](https://img.shields.io/badge/Streamlit-1.32-red)](https://streamlit.io)
 [![Mistral AI](https://img.shields.io/badge/Mistral%20AI-mistral--small-orange)](https://mistral.ai)
 [![Supabase](https://img.shields.io/badge/Supabase-PostgreSQL-green)](https://supabase.com)
+[![DALL-E 3](https://img.shields.io/badge/DALL--E%203-58%20images-purple)](https://openai.com/dall-e-3)
 
 ---
 
@@ -99,12 +102,34 @@ CREATE TABLE scenarios (
 
 ---
 
+## ✨ Fonctionnalités actuelles
+
+### 🎮 Mode Quiz
+- **58 scénarios** illustrés par DALL-E 3 de haute qualité
+- **Sélection par thème** ou mode aléatoire  
+- **Interface responsive** avec colonnes optimisées
+- **Chat en temps réel** avec Bulle (Mistral AI)
+
+### 🤖 Génération IA
+- **Nouveaux scénarios** créés par Mistral AI à la demande
+- **Classification automatique** des thèmes
+- **Persistance** des scénarios générés dans Supabase
+- **Images placeholder** (avec système DALL-E hebdomadaire prévu)
+
+### 🛠️ Déploiement
+- **Production** : HuggingFace Spaces (public)
+- **Développement** : GitHub repository  
+- **Base de données** : Supabase PostgreSQL
+- **Images** : Stockage hybrid (local + base64 cloud)
+
+---
+
 ## 🚀 Installation locale
 
 ```bash
 # 1. Clone le repo
-git clone https://github.com/TON_USERNAME/quiz-dans-ta-bulle.git
-cd quiz-dans-ta-bulle
+git clone https://github.com/AgaHei/Quiz-Dans-Ta-Bulle.git
+cd Quiz-Dans-Ta-Bulle
 
 # 2. Installe les dépendances
 pip install -r requirements.txt
@@ -148,8 +173,6 @@ Aucune réponse ni conversation n'est sauvegardée. Tout reste en session locale
 
 ## 👩‍💻 Auteure
 
-**Aga** — Traductrice professionnelle (PL/EN/FR/RU) reconvertie en ML Engineer.  
-Certifiée ML Engineer & AI Architect (Jedha Bootcamp).  
-Passionnée par les applications de l'IA au service du lien humain et de l'inclusion.
+**Agnès** —   passionnée par les applications de l'IA au service du lien humain et de l'inclusion.
 
-🔗 [LinkedIn](https://linkedin.com/in/TON_PROFIL) · [HuggingFace](https://huggingface.co/TON_USERNAME) · [GitHub](https://github.com/TON_USERNAME)
+🔗 [LinkedIn](https://linkedin.com/in/TON_PROFIL) · [HuggingFace](https://huggingface.co/AgaHei) · [GitHub](https://github.com/AgaHei)
