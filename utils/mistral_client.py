@@ -9,18 +9,24 @@ import os
 import json
 import base64
 import requests
+import streamlit as st
 from mistralai.client import Mistral
 from dotenv import load_dotenv
 
 load_dotenv()
 
-# ── Initialisation Mistral ─────────────────────────────────────────────────────
+# ── Initialisation Mistral avec gestion d'erreur ──────────────────────────────
 
 def get_client() -> Mistral:
-    api_key = os.getenv("MISTRAL_API_KEY")
-    if not api_key:
-        raise ValueError("❌ MISTRAL_API_KEY introuvable — vérifie ton .env")
-    return Mistral(api_key=api_key)
+    """Retourne le client Mistral avec gestion d'erreur"""
+    try:
+        # Priorité à st.secrets (déploiement) puis .env (local)
+        api_key = st.secrets.get("MISTRAL_API_KEY") or os.getenv("MISTRAL_API_KEY")
+        if not api_key:
+            return None
+        return Mistral(api_key=api_key)
+    except Exception:
+        return None
 
 MODEL = "mistral-small-latest"
 
@@ -91,17 +97,23 @@ def build_first_user_message(contexte: str, choix_lettre: str, choix_texte: str)
 def get_bulle_response(messages: list[dict]) -> str:
     """Envoie l'historique à Mistral et retourne la réponse de Bulle."""
     client = get_client()
-    full_messages = [
-        {"role": "system", "content": SYSTEM_PROMPT},
-        *messages
-    ]
-    response = client.chat.complete(
-        model=MODEL,
-        messages=full_messages,
-        max_tokens=300,
-        temperature=0.75,
-    )
-    return response.choices[0].message.content.strip()
+    if not client:
+        return "🫧 Désolé, je ne peux pas répondre pour le moment. Chat non disponible."
+        
+    try:
+        full_messages = [
+            {"role": "system", "content": SYSTEM_PROMPT},
+            *messages
+        ]
+        response = client.chat.complete(
+            model=MODEL,
+            messages=full_messages,
+            max_tokens=300,
+            temperature=0.75,
+        )
+        return response.choices[0].message.content.strip()
+    except Exception:
+        return "🫧 Désolé, j'ai un problème technique en ce moment."
 
 # ── Génération de scénarios ────────────────────────────────────────────────────
 
@@ -168,21 +180,28 @@ def classify_theme_from_user_input(user_theme: str) -> str:
 def generate_new_scenario(theme: str) -> dict:
     """Génère un scénario texte via Mistral."""
     client = get_client()
-    response = client.chat.complete(
-        model=MODEL,
-        messages=[
-            {"role": "system", "content": SCENARIO_GENERATION_PROMPT},
-            {"role": "user", "content": f"Génère un scénario sur le thème : {theme}"}
-        ],
-        max_tokens=600,
-        temperature=0.85,
-    )
-    raw = response.choices[0].message.content.strip()
-    if raw.startswith("```"):
-        raw = raw.split("```")[1]
-        if raw.startswith("json"):
-            raw = raw[4:]
-    return json.loads(raw.strip())
+    if not client:
+        raise ValueError("❌ Génération impossible - Mistral non configuré")
+        
+    try:
+        response = client.chat.complete(
+            model=MODEL,
+            messages=[
+                {"role": "system", "content": SCENARIO_GENERATION_PROMPT},
+                {"role": "user", "content": f"Génère un scénario sur le thème : {theme}"}
+            ],
+            max_tokens=600,
+            temperature=0.85,
+        )
+        raw = response.choices[0].message.content.strip()
+        if raw.startswith("```"):
+            raw = raw.split("```")[1]
+            if raw.startswith("json"):
+                raw = raw[4:]
+        return json.loads(raw.strip())
+    except Exception as e:
+        # Re-raise avec message simple pour la sidebar
+        raise Exception(f"Erreur de génération: {str(e)[:50]}...")
 
 # ── Génération d'image via Placeholder.pics + style ──────────────────────────
 

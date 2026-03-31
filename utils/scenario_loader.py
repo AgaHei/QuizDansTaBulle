@@ -7,6 +7,7 @@ Les images des scénarios générés sont stockées en base64 dans Supabase.
 """
 
 import random
+import streamlit as st
 from pathlib import Path
 from utils.supabase_client import (
     fetch_all_scenarios,
@@ -19,6 +20,7 @@ IMAGES_DIR = Path("assets/images")
 
 # ── Scénarios ──────────────────────────────────────────────────────────────────
 
+@st.cache_data(ttl=3600)  # Cache pendant 1 heure
 def load_scenarios() -> list[dict]:
     """Charge et retourne tous les scénarios depuis Supabase."""
     return fetch_all_scenarios()

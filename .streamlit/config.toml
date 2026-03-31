@@ -1,12 +1,10 @@
 [server]
 port = 7860
 headless = true
-enableCORS = false
 maxUploadSize = 200
 
 [browser]
 gatherUsageStats = false
-showErrorDetails = true
 
 [theme]
 base = "light"

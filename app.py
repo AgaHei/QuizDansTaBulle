@@ -8,6 +8,10 @@ Scénarios interactifs + mini-chat bienveillant avec Mistral (Bulle).
 import base64
 import streamlit as st
 from pathlib import Path
+from dotenv import load_dotenv
+
+# Charger les variables d'environnement avant tout import
+load_dotenv()
 
 from utils.scenario_loader import (
     get_random_scenario,
