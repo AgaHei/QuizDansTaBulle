@@ -6,9 +6,10 @@
 
 [![HuggingFace Spaces](https://img.shields.io/badge/🤗%20HuggingFace%20Spaces-Quiz%20Dans%20Ta%20Bulle-ffcc33)](https://huggingface.co/spaces/AgaHei/Quiz-Dans-Ta-Bulle)
 [![Streamlit](https://img.shields.io/badge/Streamlit-1.32-red)](https://streamlit.io)
-[![Mistral AI](https://img.shields.io/badge/Mistral%20AI-mistral--small-orange)](https://mistral.ai)
+[![Mistral AI](https://img.shields.io/badge/Mistral%20AI-open--mistral--7b-orange)](https://mistral.ai)
+[![DALL-E 3](https://img.shields.io/badge/DALL--E%203-Images-purple)](https://openai.com/dall-e-3)
 [![Supabase](https://img.shields.io/badge/Supabase-PostgreSQL-green)](https://supabase.com)
-[![DALL-E 3](https://img.shields.io/badge/DALL--E%203-58%20images-purple)](https://openai.com/dall-e-3)
+[![Production Ready](https://img.shields.io/badge/Status-Production%20Ready-brightgreen)](https://huggingface.co/spaces/AgaHei/Quiz-Dans-Ta-Bulle)
 
 ---
 
@@ -16,7 +17,7 @@
 
 Quiz dans ta bulle propose des scénarios de la vie quotidienne (amitié, famille, travail, réseaux sociaux...) et invite l'utilisateur à explorer ses réactions sociales avec **Bulle**, un compagnon IA bienveillant.
 
-L'application est conçue pour être inclusive et non-clinique — elle s'adresse à tout public souhaitant développer ses compétences sociales dans un cadre safe, sans jugement.
+L'application est conçue pour être inclusive — elle s'adresse à tout public souhaitant développer ses compétences sociales dans un cadre safe, sans jugement.
 
 ---
 
@@ -29,12 +30,12 @@ quiz-dans-ta-bulle/
 ├── requirements.txt
 │
 ├── data/
-│   └── scenarios.json          # Base locale des 50 scénarios initiaux
+│   └── scenarios.json          # Fallback local - 51 scénarios de base
 │
 ├── assets/
-│   └── images/                 # Images DALL-E 3 (générées one-shot)
-│       ├── scenario_001.png
-│       └── ...
+│   └── images/                 # Images DALL-E 3 pour scénarios de base (générées une fois)
+│       ├── scenario_001.png    
+│       └── ...                 # + images DALL-E 3 en base64 dans Supabase (mises à jour périodiques)
 │
 ├── utils/
 │   ├── mistral_client.py       # Prompts + appels API Mistral
@@ -42,8 +43,8 @@ quiz-dans-ta-bulle/
 │   └── supabase_client.py      # CRUD Supabase
 │
 └── scripts/
-    ├── generate_images.py      # Génération one-shot images DALL-E
-    ├── generate_missing_images.py  # Mise à jour hebdo images manquantes
+    ├── generate_images.py      # Génération initiale images DALL-E 3  
+    ├── update_missing_images.py  # Mise à jour périodique des images manquantes
     └── init_supabase.py        # Population initiale Supabase
 ```
 
@@ -53,12 +54,13 @@ quiz-dans-ta-bulle/
 
 | Composant | Technologie | Justification |
 |---|---|---|
-| **Interface** | Streamlit | Déploiement rapide, adapté aux apps data/AI |
-| **LLM chat** | Mistral AI `mistral-small-latest` | Modèle français, performant, API accessible |
-| **Génération scénarios** | Mistral AI | JSON structuré, prompt engineering soigné |
-| **Images** | DALL-E 3 (OpenAI) | Qualité et cohérence visuelle — génération one-shot |
-| **Base de données** | Supabase (PostgreSQL) | Persistance des scénarios générés, JSONB pour les options |
-| **Déploiement** | HuggingFace Spaces | Hébergement gratuit, intégration naturelle avec l'écosystème ML |
+| **Interface** | Streamlit + CSS personnalisé | Interface moderne, déploiement rapide sur HF Spaces |
+| **LLM chat** | Mistral AI `open-mistral-7b` | Modèle français, performant, API stable et accessible |
+| **Génération scénarios** | Mistral AI | Prompts optimisés pour JSON structuré, cohérence thématique |
+| **Images** | DALL-E 3 (OpenAI) + système hybride | Scénarios de base = images locales DALL-E, nouveaux = 🫧 puis DALL-E périodique |
+| **Base de données** | Supabase (PostgreSQL + RLS) | 58+ scénarios, sécurisé, performance optimisée |
+| **Architecture** | Chargement optimisé | Scénarios sans images (rapide) + images à la demande (évite timeouts) |
+| **Déploiement** | HuggingFace Spaces + Docker | Hébergement gratuit, CI/CD via Git, environnement containerisé |
 
 ---
 
@@ -85,6 +87,7 @@ Tu n'es pas là pour enseigner, tu es là pour réfléchir ensemble. 🫧
 ## 🗄️ Modèle de données Supabase
 
 ```sql
+-- Table optimisée pour éviter les timeouts lors du chargement
 CREATE TABLE scenarios (
     id            TEXT PRIMARY KEY,
     theme         TEXT NOT NULL,
@@ -93,11 +96,35 @@ CREATE TABLE scenarios (
     options       JSONB NOT NULL,       -- {"A": "...", "B": "...", "C": "..."}
     bonne_reponse TEXT NOT NULL,
     commentaire   TEXT NOT NULL,
-    image_prompt  TEXT,
-    image_b64     TEXT,                 -- base64, NULL pour scénarios de base
+    image_b64     TEXT,                 -- base64, NULL pour scénarios de base, chargé individuellement 
     source        TEXT DEFAULT 'base', -- 'base' | 'generated'
     created_at    TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
+
+-- Row Level Security (obligatoire pour sécurité)
+ALTER TABLE scenarios ENABLE ROW LEVEL SECURITY;
+
+-- Policy 1: Lecture publique (pour l'app quiz)
+CREATE POLICY "Public read access" ON scenarios FOR SELECT TO public USING (true);
+
+-- Policy 2: Écriture authentifiée uniquement  
+CREATE POLICY "Authenticated write access" ON scenarios FOR ALL TO authenticated USING (true);
+```
+
+### Architecture anti-timeout ⚡
+
+L'app charge les scénarios **sans** leurs images base64 pour éviter les timeouts Supabase :
+
+1. **Chargement rapide** : `SELECT id, theme, contexte, question, options, bonne_reponse, commentaire` (pas `image_b64`)
+2. **Images à la demande** : `image_b64` chargée individuellement quand un scénario s'affiche  
+3. **Fallback JSON** : Si Supabase indisponible, 51 scénarios de base depuis fichier local
+
+### Workflow images DALL-E 3 🎨
+
+1. **Scénarios de base** : Images DALL-E 3 déjà générées et stockées localement
+2. **Nouveaux scénarios** : Créés par Mistral → affichage avec placeholder 🫧  
+3. **Mise à jour périodique** : Script DALL-E 3 génère les images manquantes → stockage base64 dans Supabase
+4. **Affichage** : L'app charge d'abord les images locales, puis les images base64 de Supabase
 ```
 
 ---
@@ -105,22 +132,25 @@ CREATE TABLE scenarios (
 ## ✨ Fonctionnalités actuelles
 
 ### 🎮 Mode Quiz
-- **58 scénarios** illustrés par DALL-E 3 de haute qualité
+- **58+ scénarios** avec images DALL-E 3 (locales pour scénarios de base, base64 en Supabase pour nouveaux)
+- **Chargement optimisé** : scénarios rapides + images à la demande (évite timeouts Supabase)
 - **Sélection par thème** ou mode aléatoire  
-- **Interface responsive** avec colonnes optimisées
-- **Chat en temps réel** avec Bulle (Mistral AI)
+- **Interface responsive** avec CSS personnalisé et colonnes optimisées
+- **Chat en temps réel** avec Bulle (Mistral AI open-mistral-7b)
 
 ### 🤖 Génération IA
-- **Nouveaux scénarios** créés par Mistral AI à la demande
-- **Classification automatique** des thèmes
-- **Persistance** des scénarios générés dans Supabase
-- **Images placeholder** (avec système DALL-E hebdomadaire prévu)
+- **Nouveaux scénarios** créés par Mistral AI (open-mistral-7b) à la demande
+- **Classification automatique** des thèmes via prompt engineering
+- **Persistance sécurisée** dans Supabase avec Row Level Security
+- **Images DALL-E 3** : placeholder 🫧 initialement, puis mises à jour périodiques avec DALL-E 3
+- **Workflow hybride** : génération Mistral → stockage → génération d'images DALL-E → mise à jour base
 
-### 🛠️ Déploiement
-- **Production** : HuggingFace Spaces (public)
-- **Développement** : GitHub repository  
-- **Base de données** : Supabase PostgreSQL
-- **Images** : Stockage hybrid (local + base64 cloud)
+### 🛠️ Déploiement & Performance  
+- **Production** : HuggingFace Spaces avec Docker (public, stable)
+- **Développement** : GitHub repository avec CI/CD automatique
+- **Base de données** : Supabase PostgreSQL avec RLS et optimisations anti-timeout
+- **Images** : Système hybride (local + base64) pour performance optimale
+- **Sécurité** : Aucune conversation stockée, politiques Supabase granulaires
 
 ---
 
@@ -148,20 +178,34 @@ streamlit run app.py
 ### Variables d'environnement requises
 
 ```bash
+# OBLIGATOIRE - API Mistral pour chat et génération scénarios
 MISTRAL_API_KEY=...     # console.mistral.ai
-OPENAI_API_KEY=...      # platform.openai.com (génération images one-shot)
+
+# OBLIGATOIRE - Supabase pour charger les 58+ scénarios
 SUPABASE_URL=...        # Settings > API dans ton projet Supabase
-SUPABASE_KEY=...        # Clé anon/public Supabase
+SUPABASE_KEY=...        # Clé service role (pas anon) pour RLS
+
+# OPTIONNEL - Génération d'images DALL-E (mises à jour périodiques)
+OPENAI_API_KEY=...      # platform.openai.com
 ```
+
+### Configuration Supabase (importante)
+
+1. **Activer Row Level Security** sur la table `scenarios`
+2. **Créer 2 policies** :
+   - Policy 1: `Public read access` (SELECT pour tous)
+   - Policy 2: `Authenticated write access` (ALL pour authenticated)
 
 ---
 
 ## 📊 Contenu
 
-- **58 scénarios** illustrés par DALL-E 3
+- **58+ scénarios** avec images DALL-E 3 (locales + base64 progressivement mis à jour)
 - **7 thèmes** : École, Amitié, Famille, Vie quotidienne, Réseaux sociaux, Vie pro, Relations
-- **Génération dynamique** de nouveaux scénarios via Mistral AI
-- **Persistance** des scénarios générés dans Supabase
+- **Génération dynamique** de nouveaux scénarios via Mistral AI (open-mistral-7b)
+- **Images de qualité** : DALL-E 3 pour tous les scénarios (workflow de mise à jour périodique)
+- **Architecture optimisée** : chargement rapide des scénarios + images à la demande
+- **Sécurité** : Supabase RLS activée, aucune conversation stockée
 
 ---
 
